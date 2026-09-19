@@ -1,11 +1,3 @@
-# README: public
+# Select-From, the fastest way to build queries.
 
-Static assets served directly by Vite.
-
-## Directory contents
-
-- `sample-data.csv` - Sample dataset used by the app and tests.
-
-## Key data structures
-
-None
+See [https://nkramer.github.io/select-from-sql/about](https://nkramer.github.io/select-from-sql/about).
