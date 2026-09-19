@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Select-From</title>
+  </head>
+  <body>
+    <p>Loading Select-From…</p>
+    <script>
+      (() => {
+        const route = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        const appBasePath = "/select-from-sql/";
+
+        window.location.replace(
+          `${appBasePath}?__gh_pages_route=${encodeURIComponent(route)}`,
+        );
+      })();
+    </script>
+  </body>
+</html>

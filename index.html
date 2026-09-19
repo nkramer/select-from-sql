@@ -27,5 +27,21 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (() => {
+        const route = new URLSearchParams(window.location.search).get("__gh_pages_route");
+
+        if (!route) {
+          return;
+        }
+
+        const restoredUrl = new URL(route, window.location.origin);
+        window.history.replaceState(
+          null,
+          "",
+          `${restoredUrl.pathname}${restoredUrl.search}${restoredUrl.hash}`,
+        );
+      })();
+    </script>
   </body>
 </html>
