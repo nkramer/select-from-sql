@@ -199,7 +199,8 @@
       }
 
       code {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
         font-size: 12px;
       }
 
@@ -221,10 +222,9 @@
       <section class="hero">
         <h1>Noto Sans Feature Specimen</h1>
         <p>
-          This page uses the same self-hosted variable font file as the app.
-          The important detail for your original issue is that the alternate
-          capital <strong>J</strong> is exposed through <code>ss04</code> and
-          <code>salt</code>, not <code>ss01</code>.
+          This page uses the same self-hosted variable font file as the app. The important detail
+          for your original issue is that the alternate capital <strong>J</strong> is exposed
+          through <code>ss04</code> and <code>salt</code>, not <code>ss01</code>.
         </p>
         <div class="controls">
           <div class="control">
@@ -237,7 +237,8 @@
           </div>
           <div class="control">
             <label for="sample-text">Shared text</label>
-            <textarea id="sample-text">I J IJ JAZZ JACKPOT
+            <textarea id="sample-text">
+I J IJ JAZZ JACKPOT
 0123456789 00O0 11I1
 The quick brown fox jumps over 13 lazy dogs.</textarea>
           </div>
@@ -431,14 +432,11 @@ The quick brown fox jumps over 13 lazy dogs.</textarea>
 
           const featureLabel = document.createElement("span");
           featureLabel.className = "sample-label";
-          featureLabel.textContent = card.features === "normal"
-            ? "Feature sample"
-            : `Feature sample: ${card.features}`;
+          featureLabel.textContent =
+            card.features === "normal" ? "Feature sample" : `Feature sample: ${card.features}`;
 
           featureSample.append(featureLabel);
-          featureSample.append(
-            createSampleLine(card.text || sharedText, card.features),
-          );
+          featureSample.append(createSampleLine(card.text || sharedText, card.features));
 
           const compareSample = document.createElement("div");
           compareSample.className = "sample stack";
@@ -458,10 +456,7 @@ The quick brown fox jumps over 13 lazy dogs.</textarea>
       }
 
       function syncControls() {
-        document.documentElement.style.setProperty(
-          "--sample-size",
-          `${sampleSizeInput.value}px`,
-        );
+        document.documentElement.style.setProperty("--sample-size", `${sampleSizeInput.value}px`);
         document.documentElement.style.setProperty(
           "--sample-tracking",
           `${Number(trackingInput.value) / 1000}em`,
